@@ -18,7 +18,7 @@ export const coursesReducer = (state = coursesInitialState, action) => {
       return [...state, ...action.payload];
 
     case Data.DELETE_COURSE:
-      return [state, action.payload];
+      return [...action.payload];
 
     case Data.UPDATE_COURSES:
       return [...state, action.payload];

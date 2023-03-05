@@ -3,7 +3,7 @@ import SearchBar from "./components/SearchBar/SearchBar";
 import Button, { ButtonTypes } from "../../common/Button/button";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import CourseCard from "./components/Course-Card/CourseCard";
+import { CourseCard } from "./components/Course-Card/CourseCard";
 
 // interface courseList {
 

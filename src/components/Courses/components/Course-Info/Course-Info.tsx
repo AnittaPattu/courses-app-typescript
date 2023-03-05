@@ -8,9 +8,7 @@ export const CourseInfo: React.FC = () => {
   const AUTHOR = "Authors: ";
   const DURATION = "Duration: ";
   const CREATED = "Created: ";
-  console.log(useParams());
   const courseId = useParams()?.id;
-  console.log(courseId);
   const { state } = useLocation();
   const navigate = useNavigate();
   const courseData = state.course;

@@ -9,3 +9,7 @@ export const saveAuthorAction = (payload) => ({
   type: Data.SAVE_EXISTING_AUTHOR,
   payload,
 });
+
+export const resetAuthorAction = () => ({
+  type: Data.RESET_AUTHOR,
+});

@@ -7,7 +7,6 @@ export const App: React.FC = () => {
   const navigate = useNavigate();
   const getItem = localStorage.getItem("token");
   const location = useLocation();
-  console.log(location);
 
   useEffect(() => {
     if (

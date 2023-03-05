@@ -75,7 +75,6 @@ export const CreateCourse: React.FC = () => {
   };
 
   const updateCourseArray = (data) => {
-    console.log(data);
     const author = [...courseAuthor, ...authorList];
     dispatch(updateCoursesAction(data));
     dispatch(addAuthorAction(author));
@@ -94,7 +93,7 @@ export const CreateCourse: React.FC = () => {
         id: Math.random().toString().substring(2, 8),
         title: title,
         description: desc,
-        author: courseAuthor.map((data) => data.id),
+        authors: courseAuthor.map((data) => data.id),
         duration: duration,
         creationDate: (
           currentDate.getDate() +

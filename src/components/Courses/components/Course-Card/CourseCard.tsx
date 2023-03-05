@@ -31,7 +31,6 @@ const CourseCard: React.FC = ({ ...props }: CourseProps) => {
   const BUTTON_TEXT = "Show Courses";
   const navigate = useNavigate();
   const cardList: CourseProps[] = useSelector<State>((state) => state.courses);
-  console.log(cardList);
 
   const showCourses = () => {
     if (event.target.tagName === "BUTTON") {

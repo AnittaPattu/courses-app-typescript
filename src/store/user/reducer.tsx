@@ -14,7 +14,7 @@ export const userReducer = (state = userInitialState, action) => {
       return { ...state, ...action.payload };
 
     case Data.DELETE_USER:
-      return [state, action.payload];
+      return { ...state, ...action.payload };
 
     default:
       return state;

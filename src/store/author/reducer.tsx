@@ -1,6 +1,10 @@
 import * as Data from "./types";
 
-export const authorsInitialState = [];
+interface Author {
+  name: string;
+  id: string;
+}
+export const authorsInitialState: Author[] = [];
 
 // Use the initialState as a default value
 export const AuthorReducer = (state = authorsInitialState, action) => {
@@ -10,6 +14,9 @@ export const AuthorReducer = (state = authorsInitialState, action) => {
 
     case Data.SAVE_EXISTING_AUTHOR:
       return action.payload;
+
+    case Data.RESET_AUTHOR:
+      return authorsInitialState;
 
     default:
       return state;

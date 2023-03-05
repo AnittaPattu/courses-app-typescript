@@ -12,3 +12,7 @@ export const updateCoursesAction = (payload) => ({
   type: Data.UPDATE_COURSES,
   payload,
 });
+
+export const resetCourseAction = () => ({
+  type: Data.RESET_Courses,
+});

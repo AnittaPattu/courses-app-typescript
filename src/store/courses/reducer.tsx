@@ -26,6 +26,9 @@ export const coursesReducer = (state = coursesInitialState, action) => {
     case Data.SAVE_COURSE:
       return action.payload;
 
+    case Data.RESET_Courses:
+      return coursesInitialState;
+
     default:
       return state;
   }

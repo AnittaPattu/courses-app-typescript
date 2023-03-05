@@ -3,24 +3,28 @@ import Button from "../../common/Button/button";
 import { useLocation, useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux/es/hooks/useSelector";
-import { addUserAction } from "src/store/user/action";
+import { addUserAction, deleteUserAction } from "src/store/user/action";
 import { useDispatch } from "react-redux/es/hooks/useDispatch";
 import { State } from "src/store";
+import { resetCourseAction } from "src/store/courses/action";
+import { resetAuthorAction } from "src/store/author/action";
+
+interface User {
+  isAuth: boolean;
+  name: string;
+  email: string;
+  token: string;
+}
 
 function Header() {
   const HEADER_BUTTON_TEXT = "Logout";
-  const location = useLocation();
+  // const location = useLocation();
   const navigate = useNavigate();
-  const name = useSelector<State>((state) => state.user.name);
+  const user = useSelector<State>((state) => state.user);
   const dispatch = useDispatch();
-  const [showName, isName] = useState(false);
+  const { pathname } = useLocation();
 
-  if (!["/", "login", "registration"].includes(location.pathname)) {
-    isName(true);
-  }
-
-  function logout(event) {
-    event.prevenDefault();
+  function logout() {
     localStorage.removeItem("token");
     const logout = {
       user: "",
@@ -28,16 +32,18 @@ function Header() {
       email: "",
       token: "",
     };
-    dispatch(addUserAction(logout));
+    dispatch(deleteUserAction(logout));
+    dispatch(resetCourseAction());
+    dispatch(resetAuthorAction());
     navigate("/");
   }
 
   return (
     <div className="header-container">
       <Logo />
-      {showName && (
+      {!["/", "/login", "registration"].includes(pathname) && (
         <div className="float-right">
-          <span className="px-3 font-weight-bold toUpper">{name}</span>
+          <span className="px-3 font-weight-bold toUpper">{user?.name}</span>
           <Button
             buttonText={HEADER_BUTTON_TEXT}
             class="button"

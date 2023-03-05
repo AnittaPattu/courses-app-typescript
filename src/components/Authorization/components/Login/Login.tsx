@@ -34,7 +34,6 @@ export const Login = () => {
           email: loginData.user.email,
           token: loginData.result,
         };
-        console.log(login);
         dispatch(addUserAction(login));
         getAllCourses();
         getAllAUthors();

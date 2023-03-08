@@ -1,0 +1,155 @@
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.float-right {
+  float: right;
+}
+
+.toUpper {
+  text-transform: uppercase;
+}
+
+.logo {
+  width: 40px;
+}
+
+.header-btn {
+  float: right;
+}
+
+.courses {
+  border: 1px solid #9fc4d7;
+}
+
+.create-course-container {
+  border: 1px solid #9fc4d7;
+  padding: 0 15px;
+}
+
+.card-details {
+  margin: 0 auto;
+  border: 1px solid #a0c7b5;
+  padding: 10px;
+  margin: 10px;
+  position: relative;
+  min-height: 185px;
+}
+
+p {
+  margin-bottom: 0.2rem !important;
+}
+
+.card-body-author {
+  position: absolute;
+  top: 22px;
+  right: 0;
+}
+
+.header-container {
+  border: 1px solid #e4c7c9;
+  margin: 10px 0 0;
+  padding: 20px;
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
+.show-course-btn {
+  position: absolute;
+  left: 22%;
+  width: 160px;
+  height: 39px;
+  border: 1px solid violet;
+  background-color: transparent;
+}
+
+.card-body-desc {
+  padding: 10px 10px 10px 30px;
+}
+
+.search-input-class {
+  width: 400px;
+  margin-right: 10px;
+}
+
+.button {
+  border: 1px solid violet;
+  background-color: transparent;
+  color: #000;
+  width: 140px;
+  height: 36px;
+}
+
+.search-container {
+  padding: 15px;
+}
+
+.card-title {
+  margin-bottom: 20px !important;
+}
+
+.course-header {
+  padding: 20px 0;
+}
+
+.description {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 25px;
+}
+
+.author-card {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.author-card .author-container {
+  min-height: 200px;
+  width: 50%;
+}
+
+.author-container-full {
+  border: 1px solid violet;
+  padding: 10px;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.label-txt {
+  display: block;
+  width: 100%;
+}
+
+.author-input {
+  width: 100%;
+}
+
+.create-author {
+  margin-top: 10px;
+  margin-left: 30%;
+}
+
+.author-name {
+  min-width: 168px;
+  display: inline-block;
+}
+
+.login-label-text,
+.registration-label-text,
+.auth-btn {
+  display: block;
+  margin-top: 10px;
+}
+
+.login-form-content,
+.registration-form-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
